@@ -1,0 +1,34 @@
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 97px;
+    background-color: #b80000;
+}
+
+.container {
+    margin: 12px auto 10px;
+    width: 800px;
+    
+}
+
+.news {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.3rem;
+}
+
+.menubar {
+    
+    display: flex;
+    justify-content: space-between;
+    color: #f9ebed;
+    font-size: 0.8rem;
+}
+
+.menuitem a {
+    text-decoration: none;
+    color: #f9ebed;
+}
