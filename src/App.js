@@ -1,12 +1,14 @@
 import './App.css';
-import Navbar from "./components/Navbar"
-import Flipcard from "./components/Flipcard"
+// import Navbar from "./components/Navbar"
+// import Index from "./components/Flipcard"
+import Grid from "./components/Grid"
 
 function App() {
   return (
     <div>
-      <Flipcard />
+      {/* <Index /> */}
       {/* <Navbar /> */}
+      <Grid />
     </div>
   );
 }
