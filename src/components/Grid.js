@@ -1,106 +1,57 @@
 import styled from "styled-components"
-import {useState} from "react"
+import tank from "../assets/tank.jpg"
 
 const Wrapper = styled.div `
 position: relative;
-// display: flex;
-// flex-direction: column;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(2, 1fr);
-width: 80vw;
-height: 50vh;
-background-color: lightblue;
+width: 100vw;
+height: 100vh;
+background-color: lightgrey;
 `
-// const Group1 = styled.div `
-// display: flex;
-// width: 100%;
-// height: 100%;
-// `
-// const Group2 = styled.div `
-// display: flex;
-// width: 100%;
-// height: 100%;
-// `
 
-const Card1 = styled.div `
-position: relative;
-width: 100%;
-height: 100%;
-background-color: lightcoral;
-`
-const Card2 = styled.div `
-position: relative;
-width: 100%;
-height: 100%;
+const Card = styled.div `
+position: absolute;
+top: 20%;
+left: 20%;
+width: 40%;
+height: 30%;
 background-color: blue;
+// text-align: center;
 `
 
-const Card3 = styled.div `
-position: relative;
-width: 100%;
-height: 100%;
-background-color: red;
-`
-
-const Card4 = styled.div `
-position: relative;
-width: 100%;
-height: 100%;
-background-color: green;
-`
-
-const Card5 = styled.div `
-position: relative;
-width: 100%;
-height: 100%;
-background-color: grey;
-`
-const Card5a = styled.div `
+const TitleWrapper = styled.div `
 position: absolute;
 width: 100%;
-height: 100%;
-background-color: lightblue;
-width: ${({grow}) => (grow ? "40vw" : "")};
-height: ${({grow}) => (grow ? "30vw" : "")};
-margin-top ${({grow}) => (grow ? "50%" : "")};
-margin-left: ${({grow}) => (grow ? "50%" : "")};
-transform: ${({grow}) => (grow ? "translate(-50%,-50%)" : "")};
+text-align: center;
 z-index: 99;
 `
 
-const Card6 = styled.div `
-position: relative;
-width: 100%;
-height: 100%;
-background-color: lightgreen;
+const Title = styled.p `
+color: white;
+font-size: 3rem;
+font-weight: bold;
+// background-color: red;
 `
 
+const Image = styled.img `
+position: absolute;
+object-fit: contain;
+width: 100%;
+`
 
 const Grid = () => {
-    const [grow, setGrow] = useState(false)
-
-    const changeGrow = () => {
-        setGrow(!grow);
-    }
 
     return (
         <div>
             <Wrapper>
-                {/* <Group1> */}
-                <Card1>Card1</Card1>
-                <Card2>Card2</Card2>
-                <Card3>Card3</Card3>
-                {/* </Group1> */}
-                {/* <Group2> */}
-                <Card4>Card4</Card4>
-                <Card5> <Card5a grow={grow} onClick={changeGrow}>Card5</Card5a></Card5>
-                <Card6>Card6</Card6>
-                {/* </Group2> */}
-                
+                <Card>
+                    <TitleWrapper><Title>Example</Title></TitleWrapper>
+                    
+                    <Image src={tank} alt="tank"></Image>
+                </Card>
             </Wrapper>
         </div>
     )
 }
 
 export default Grid
+
